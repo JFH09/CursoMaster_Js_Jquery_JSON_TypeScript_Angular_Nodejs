@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticiones Ajax con jquery</title>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="peticionPost_Get_Ajax.js"></script>
+    <style>
+        .datosGeneral {
+
+            width: 350px;
+            height: 350px;
+            border: 2px solid green;
+            overflow: scroll;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Peticiones ajax con jquery</h1>
+    <div id="datos" class="datosGeneral">
+
+    </div>
+
+    <br>
+    <form id="formulario2" action="https://reqres.in/api/users" method="POST">
+        <h1>Otra forma de hacer post con el formulario...</h1>
+        <input type="text" name="nombre2" placeholder="Escriba el nombre2...">
+        <input type="text" name="email2" placeholder="Escriba el correo2...">
+        <button id="btnGuardar2">Guardar Datos2</button>
+    </form>
+    <br />
+
+    <br>
+    <form action="#">
+        <input type="text" id="nuevoUsuNombre" placeholder="Escriba el nombre...">
+        <input type="text" id="nuevoUsuEmail" placeholder="Escriba el correo...">
+        <button id="btnGuardar">Guardar Datos</button>
+    </form>
+    <br />
+    <div id="datosGet" class="datosGeneral">
+
+
+    </div>
+</body>
+
+</html>

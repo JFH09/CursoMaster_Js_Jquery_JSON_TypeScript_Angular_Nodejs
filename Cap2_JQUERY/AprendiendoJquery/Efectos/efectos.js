@@ -65,7 +65,9 @@ $(document).ready(function () {
   var botonMostraryOcultar2 = $("#mostraryOcultar2");
 
   botonMostraryOcultar2.click(function () {
-    mostraryOcultarDiv2.fadeToggle("fast");
+    mostraryOcultarDiv2.fadeToggle("fast", function () {
+      console.log("cartel Ocultado..."); //se realiza el callbback para que no se demore en realizar otra logica en este metodo...
+    });
   });
 
   var mostraryOcultarDiv3 = $("#mostraryOcultarDiv3");
