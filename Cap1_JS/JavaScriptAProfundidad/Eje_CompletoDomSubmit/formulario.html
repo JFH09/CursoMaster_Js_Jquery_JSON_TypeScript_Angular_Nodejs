@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio DOM, Eventos y Funciones </title>
+    <script src="ejercicioDOM.js"></script>
+    <style>
+        .box {
+            width: 250px;
+            height: 400px;
+            float: left;
+            margin: 20px;
+        }
+
+        .dashed {
+            border: 3px dashed black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio DOM, Eventos y Funciones</h1>
+    <!-- no redireccion onsubmit/#-->
+    <div class="box">
+        <form action="#" method="POST" id="formulario" onsubmit="return false;">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre...">
+            <span id="paraError_Nombre"></span><br>
+            <label for="apellido">Apellido: </label>
+            <input type="text" class="apellido" id="apellido" placeholder="Escribe tu apellido"><br>
+            <label for="edad">Edad: </label>
+            <input type="number" name="edad" id="edad" placeholder="Escribe tu edad  "><br>
+            <br>
+            <input type="submit" value="enviar" id="submit">
+        </form>
+
+    </div>
+
+    <div class="box dashed">
+        <h3>Informacion Ingresada...</h3>
+        <hr>
+
+        <hr>
+        <h3>Otra forma</h3>
+        <p id="p_nombre">
+            Nombre: <span></span>
+        </p>
+        <p id="p_apellido">
+            Apellido: <span></span>
+        </p>
+        <p id="p_Edad">
+            Edad: <span></span>
+        </p>
+        <hr>
+        <hr>
+    </div>
+
+
+</body>
+
+</html>

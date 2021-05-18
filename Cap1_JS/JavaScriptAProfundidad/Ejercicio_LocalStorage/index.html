@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Local storage</title>
+</head>
+
+<body>
+
+    <h1>Añade tu pelicula</h1>
+
+    <form id="formulario_Pelicula">
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Escribe tu nombre" id="nombre"><br>
+        <label for="apellido">Apellido</label>
+        <input type="text" placeholder="Escribe tu apellido" id="apellido"><br>
+        <label for="edad">Edad</label>
+        <input type="number" placeholder="Tu edad" id="edad"><br>
+        <label for="pelicula">Pelicula</label>
+        <input type="text" placeholder="La pelicula" id="pelicula"><br>
+        <button id="agregar_Pelicula" type="submit">Agregar pelicula</button>
+    </form>
+
+    <div id="mostrar_Peliculas">
+        <h2>Peliculas Agregadas: </h2>
+        <ul id="lista_Peliculas">
+
+        </ul>
+
+    </div>
+
+    <form id="borrar">
+        <h1>Borrar Información</h1>
+        <label for="info_Eliminar">Eliminar Pelicula</label>
+        <input type="text" id="info_Eliminar" placeholder="Escribe el nombre a Eliminar ">
+        <button id="eliminar_Informacion">Eliminar Informacion</button>
+    </form>
+
+    <script src="eje_LocalStorage.js"></script>
+</body>
+
+</html>

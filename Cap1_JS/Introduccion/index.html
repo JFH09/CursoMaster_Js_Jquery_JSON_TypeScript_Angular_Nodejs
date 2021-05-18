@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 1 Intento1 </title>
+</head>
+
+<body>
+    <h1>Este es la pagina 1 del curso</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br> Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+    <h2>Esta es una seccion de la pagina... Bienvenidos !!!</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    </br>
+    <hr>
+
+    <h2>Segundo encabezado / Imagenes en html</h2>
+
+    <img alt="imagen desde url web" title="Imagen por URL"
+        src="https://images.pexels.com/photos/2818045/pexels-photo-2818045.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">Obteniendo
+    imagen solo por url, sin descargarla</img>
+    </br>
+
+    <img alt="imagen desde ruta dispositivo" title="Imagen por Ruta" src="Imagenes/imagen1.jpg" width="500px">Imagen por
+    Ruta del
+    archivo</img>
+
+    <hr>
+    <h3>Tercer encabezado de la pagina...</h3>
+
+    <p>Lorem ipsum dolor sit amet, <strong> adipiscing elit, sed do eiusmod </strong> tempor
+        incididunt ut labore et dolore <em>magna aliqua. Ut </em> enim ad minim veniam, quis nostrud
+        <blockquote>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+            <!--Como una cita / blockquote-->
+        </blockquote>
+        in <span id="resaltadoParrafo" style="color: brown;" class="rojo amarillo ">reprehenderit in voluptate velit
+            esse cillum dolore</span>
+        eu <i>fugiat nulla </i> pariatur. </p>
+    </br>
+    <h3>Listado de frutas</h3>
+
+    <ol>
+        <!--Lista ordenada 1. 2. 3. ...-->
+        <li>Manzana</li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ol>
+
+    <ul>
+        <!--Lista desordenada 1. 2. 3. ...-->
+        <li>
+            Manzana
+            <ul>
+                <li>Verde</li>
+                <li>Roja</li>
+            </ul>
+        </li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ul>
+    </br>
+    <hr>
+
+    <h2>Fomrulario</h2>
+
+    <form>
+        <p>
+            <label>Nombre</label>
+            <input type="text">
+        </p>
+        <p>
+            <label for="descripcion"> Describe...</label>
+            <textarea name="descripcion" placeholder="Describelo..."></textarea>
+        </p>
+        <p>
+            <label for="genero">Genero</label> <br />
+            <input type="radio" value="hombre" name="genero">Hombre </input> </br>
+            <input type="radio" value="mujer" name="genero">Mujer </input> </br>
+            <input type="radio" value="prefieroNoDecirlo" name="genero">Prefiero no decirlo </input> </br>
+        </p>
+
+        <p>
+            <label for="Genero2">Otra opcion Genero</label>
+            <select name="genero2">
+
+                <option value="hombre" name="genero2">Hombre</option>
+                <option value="mujer" name="genero2">Mujer</option>
+                <option value="otro" name="genero2">Otro</option>
+            </select>
+
+        </p>
+
+        <input type="submit" value="Enviar Formalario">
+    </form>
+
+    <hr>
+
+    <h2>TABLAS CON HTML</h2>
+
+    <table border="7">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Jorge</td>
+            <td>27</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Jose</td>
+            <td colspan="2">34</td>
+            <td>España</td>
+
+        </tr>
+
+        <tr>
+            <td>Pepito</td>
+            <td colspan="3">29</td>
+            <td>Colombia</td>
+
+        </tr>
+        <tr>
+            <td colspan="3">Roberto</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
