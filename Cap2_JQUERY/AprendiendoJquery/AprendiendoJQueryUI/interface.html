@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaces con JQUERY_UI</title>
+    <link rel="stylesheet" href="../JqueryUI/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="../JqueryUI/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="../JqueryUI/jquery-ui-1.12.1/jquery-ui.theme.min.css">
     <script src="../jquery/jquery-3.6.0.min.js"></script>
     <script src="../JqueryUI/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="interfaces.js"></script>
@@ -19,11 +22,53 @@
             margin: 20px;
             float: left;
         }
+
+        .lista-seleccionable li {
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        /*Toca dejar el selecting- selected en ingles :O */
+        ul .ui-selecting {
+            background: green;
+        }
+
+        ul .ui-selected {
+            background: gray;
+        }
+
+        #elemento-movido {
+            width: 60px;
+            padding: 60px;
+            border: 4px solid #ccc;
+        }
+
+        #area {
+            width: 100px;
+            padding: 100px;
+            border: 4px solid green;
+        }
     </style>
 </head>
 
 <body>
     <h1>Aprendiendo JQUERY_UI</h1>
+
+
+    <div id="elemento-movido"></div>
+    <br>
+    <div id="area"></div>
+    <br>
+    <ul class="lista-seleccionable">
+        <li>GTA 5</li>
+        <li>Need for speed</li>
+        <li>Crash Bandicoot</li>
+        <li>Super mario</li>
+        <li>Galaxian</li>
+    </ul>
 
     <div class="elemento">
         Hola soy elemento 1
