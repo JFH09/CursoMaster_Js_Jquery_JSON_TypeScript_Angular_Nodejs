@@ -8,6 +8,7 @@
     <title>Proyecto con JS y JQ</title>
 
 
+
     <!--Estilos CSS-->
     <link rel="stylesheet" href="/css/styles.css">
     <link id="theme" rel="stylesheet" href="/css/green.css">
@@ -16,13 +17,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
-    <!--Slider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
     <!--Moment js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
+
     <!--Scripts-->
     <script src="js/main.js"></script>
 </head>
@@ -56,47 +54,15 @@
                 </ul>
             </navbar>
         </header>
-        <!--Slider-->
 
-        <div id="slider">
-            <div class="galeria">
-                <div><img src="/img/hojas.jpg" title="Hojas"></div>
-                <div><img src="/img/rojo.jpg" title="Rojo"></div>
-                <div><img src="/img/cielo.jpg" title="Cielo"></div>
-            </div>
-        </div>
 
         <!--Contenido-->
         <section id="content">
-            <div id="posts">
-                <article class="post">
-                    <!--Se cargan los post desde un json -->
-                    <h2>Titulo del articulo</h2>
-                    <span class="date">Fecha de publicación</span>
+            <div id="box">
+                <!--Se carga el reloj -->
+                <div id="reloj">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus risus enim, quis
-                        malesuada eros ultricies nec. Morbi non ex eget augue lacinia auctor id id justo. Ut venenatis
-                        mauris eget ex pellentesque, nec tincidunt leo elementum. Quisque sit amet quam malesuada,
-                        fringilla orci nec, elementum velit. Duis ultrices vulputate sodales. Curabitur at tortor
-                        mollis, elementum metus ut, accumsan risus. Nullam pellentesque risus eget ante iaculis, a
-                        tristique eros maximus. Mauris nec posuere odio. Nunc ullamcorper hendrerit nunc sed consectetur
-                    </p>
-                    <a href="#" class="button-more">Leer Más</a>
-                </article>
-
-                <article class="post">
-                    <h2>Titulo del articulo</h2>
-                    <span class="date">Fecha de publicación</span>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus risus enim, quis
-                        malesuada eros ultricies nec. Morbi non ex eget augue lacinia auctor id id justo. Ut venenatis
-                        mauris eget ex pellentesque, nec tincidunt leo elementum. Quisque sit amet quam malesuada,
-                        fringilla orci nec, elementum velit. Duis ultrices vulputate sodales. Curabitur at tortor
-                        mollis, elementum metus ut, accumsan risus. Nullam pellentesque risus eget ante iaculis, a
-                        tristique eros maximus. Mauris nec posuere odio. Nunc ullamcorper hendrerit nunc sed consectetur
-                    </p>
-                    <a href="#" class="button-more">Leer Más</a>
-                </article>
+                </div>
 
             </div>
             <aside id="sidebar">
