@@ -9,6 +9,14 @@ class Camiseta{
     private precio: number;
 
     // Metodos (funciones o acciones del objeto)
+    // El constructor sirve para poder darle unos valores iniciales a los parametros...
+    constructor (color, modelo, marca, talla, precio){
+        this.color = color;
+        this.modelo = modelo;
+        this.marca = marca;
+        this.talla = talla;
+        this.precio = precio;
+    }
     public setColor (color){
         this.color = color;
     }
@@ -18,14 +26,10 @@ class Camiseta{
     }
 }
 
-var n_camiseta = new Camiseta();
+var n_camiseta = new Camiseta("Rojo", "Manga Larga", "Nike", "L", 10);
+n_camiseta.setColor("Nuevo_Color");
 
-n_camiseta.setColor("Rojo");
-
-
-var playera = new Camiseta();
-playera.setColor("Azul")
-console.log(n_camiseta.getColor(), playera);
+console.log(n_camiseta);
 
 /* ESTO SERVIRIA SOLO SI LAS PROPIEDADES ESTUVIERAN PUBLICAS (YA NO SERIA NECESARIO LOS METODOS DENTRO DE LA CLASE) */
 // var n_camiseta = new Camiseta();

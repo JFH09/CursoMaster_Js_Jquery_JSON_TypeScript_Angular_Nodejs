@@ -1,8 +1,14 @@
 // Clase (modelo del objeto)
 var Camiseta = /** @class */ (function () {
-    function Camiseta() {
-    }
     // Metodos (funciones o acciones del objeto)
+    // El constructor sirve para poder darle unos valores iniciales a los parametros...
+    function Camiseta(color, modelo, marca, talla, precio) {
+        this.color = color;
+        this.modelo = modelo;
+        this.marca = marca;
+        this.talla = talla;
+        this.precio = precio;
+    }
     Camiseta.prototype.setColor = function (color) {
         this.color = color;
     };
@@ -11,11 +17,9 @@ var Camiseta = /** @class */ (function () {
     };
     return Camiseta;
 }());
-var n_camiseta = new Camiseta();
-n_camiseta.setColor("Rojo");
-var playera = new Camiseta();
-playera.setColor("Azul");
-console.log(n_camiseta.getColor(), playera);
+var n_camiseta = new Camiseta("Rojo", "Manga Larga", "Nike", "L", 10);
+n_camiseta.setColor("Nuevo_Color");
+console.log(n_camiseta);
 /* ESTO SERVIRIA SOLO SI LAS PROPIEDADES ESTUVIERAN PUBLICAS (YA NO SERIA NECESARIO LOS METODOS DENTRO DE LA CLASE) */
 // var n_camiseta = new Camiseta();
 // n_camiseta.color =  "rojo";
