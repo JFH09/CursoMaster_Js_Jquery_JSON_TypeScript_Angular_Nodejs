@@ -1,5 +1,12 @@
+//Interface - son como obligaciones que se le colocan a una clase para que se cumpla
+interface CamisetaBase {
+    setColor(color);
+    getColor();
+}
+
+
 // Clase (modelo del objeto)
-class Camiseta{
+class Camiseta  implements CamisetaBase{ 
     //Propiedades (caracteristicas del objeto)
 
     private color: string; // si coloco las propiedades privadas solo las podria acceder desde dentro de la clase (camiseta {})
@@ -17,7 +24,10 @@ class Camiseta{
         this.talla = talla;
         this.precio = precio;
     }
-    public setColor (color){
+
+    //Si se le colocan metodos con diferente nombre a los que estan el la interface 
+    //- no servira porque es una obligacion que se llamen de la forma que se coloco ahi...
+    public setColor (color){  
         this.color = color;
     }
 
@@ -26,10 +36,35 @@ class Camiseta{
     }
 }
 
+// !Herencia 
+// Clase Hija
+
+class Sudadera extends Camiseta{
+    public capucha: boolean;
+
+    setCapucha(capucha: boolean){
+        this.capucha = capucha;
+    }
+
+    getCapucha() :boolean{ //:boolean -> Devuelve un boolean
+        return this.capucha;
+    }
+}
+
+// *ASI ES COMO SE USA DESDE EL MISMO archivo
+
 var n_camiseta = new Camiseta("Rojo", "Manga Larga", "Nike", "L", 10);
 n_camiseta.setColor("Nuevo_Color");
 
 console.log(n_camiseta);
+
+//*Creando un objeto de clase hija Sudadera
+
+var sudadera_nike = new Sudadera("Negro","Manga Larga","Nike","M",23);
+sudadera_nike.setCapucha(true);
+console.log(sudadera_nike);
+sudadera_nike.setColor("Gris");
+console.log(sudadera_nike);
 
 /* ESTO SERVIRIA SOLO SI LAS PROPIEDADES ESTUVIERAN PUBLICAS (YA NO SERIA NECESARIO LOS METODOS DENTRO DE LA CLASE) */
 // var n_camiseta = new Camiseta();
