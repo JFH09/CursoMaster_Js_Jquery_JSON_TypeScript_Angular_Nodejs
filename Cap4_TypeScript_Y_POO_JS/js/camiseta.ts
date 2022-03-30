@@ -4,9 +4,21 @@ interface CamisetaBase {
     getColor();
 }
 
+//Decoradores -> no lo entendi bien  (Creo que son para agregar funcionalidades a una clase o algo asi...)
+function estampar(logo: string){
+    return function(target: Function){
+        // Aqui el target.prototype.(Nombre de lo que se le va agregar) = function...
+        target.prototype.estampacion = function():void {
+            console.log("Camiseta estampada con el logo de : " + logo);
+        }
+    }
+}
+
+// !implementar el decorador
+@estampar("Esto es el logo de la estampa :O") //No se termina con ;
 
 // Clase (modelo del objeto)
-class Camiseta  implements CamisetaBase{ 
+class Camiseta  implements CamisetaBase{  //aparece error por que la compatibilidad con los decoradore es experimental y toca cambiar eso en las reglas de un archivo...
     //Propiedades (caracteristicas del objeto)
 
     private color: string; // si coloco las propiedades privadas solo las podria acceder desde dentro de la clase (camiseta {})
@@ -51,11 +63,15 @@ class Sudadera extends Camiseta{
     }
 }
 
+
+
+
 // *ASI ES COMO SE USA DESDE EL MISMO archivo
 
 var n_camiseta = new Camiseta("Rojo", "Manga Larga", "Nike", "L", 10);
 n_camiseta.setColor("Nuevo_Color");
-
+//!agregando/llamando el metodo del decorador (estampacion)
+n_camiseta.estampacion(); //aparece error por que la compatibilidad con los decoradore es experimental y toca cambiar eso en las reglas de un archivo...
 console.log(n_camiseta);
 
 //*Creando un objeto de clase hija Sudadera

@@ -13,7 +13,22 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// Clase (modelo del objeto)
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+//Decoradores -> no lo entendi bien  (Creo que son para agregar funcionalidades a una clase o algo asi...)
+function estampar(logo) {
+    return function (target) {
+        // Aqui el target.prototype.(Nombre de lo que se le va agregar) = function...
+        target.prototype.estampacion = function () {
+            console.log("Camiseta estampada con el logo de : " + logo);
+        };
+    };
+}
+// !implementar el decorador
 var Camiseta = /** @class */ (function () {
     // Metodos (funciones o acciones del objeto)
     // El constructor sirve para poder darle unos valores iniciales a los parametros...
@@ -32,6 +47,10 @@ var Camiseta = /** @class */ (function () {
     Camiseta.prototype.getColor = function () {
         return this.color;
     };
+    Camiseta = __decorate([
+        estampar("Esto es el logo de la estampa :O") //No se termina con ;
+        // Clase (modelo del objeto)
+    ], Camiseta);
     return Camiseta;
 }());
 // !Herencia 
@@ -52,6 +71,8 @@ var Sudadera = /** @class */ (function (_super) {
 // *ASI ES COMO SE USA DESDE EL MISMO archivo
 var n_camiseta = new Camiseta("Rojo", "Manga Larga", "Nike", "L", 10);
 n_camiseta.setColor("Nuevo_Color");
+//!agregando/llamando el metodo del decorador (estampacion)
+n_camiseta.estampacion(); //aparece error por que la compatibilidad con los decoradore es experimental y toca cambiar eso en las reglas de un archivo...
 console.log(n_camiseta);
 //*Creando un objeto de clase hija Sudadera
 var sudadera_nike = new Sudadera("Negro", "Manga Larga", "Nike", "M", 23);
