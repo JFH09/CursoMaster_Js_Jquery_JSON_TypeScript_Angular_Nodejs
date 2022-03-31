@@ -1,11 +1,16 @@
-<h2>Componente de VideoJuegos </h2>
-<h2>{{titulo}}</h2>
-<p>{{listado}}</p>
+<div style="background-color: rgba(128, 128, 128, 0.637);">
+  <h2>Componente de VideoJuegos </h2>
+  <h2>{{titulo}}</h2>
+  <p>{{listado}}</p>
 
-<ul>
-  <li>GTA</li>
-  <li>CRASH</li>
-  <li>Tekken</li>
-  <li>Mario</li>
-</ul>
-<zapatillas></zapatillas>
+  <!--Para llamar a un evento se hace con -> (evento)-->
+  <button (click)="cambiarTitulo()">Cambiar Titulo</button>
+
+  <ul>
+    <li>GTA</li>
+    <li>CRASH</li>
+    <li>Tekken</li>
+    <li>Mario</li>
+  </ul>
+  <zapatillas></zapatillas>
+</div>

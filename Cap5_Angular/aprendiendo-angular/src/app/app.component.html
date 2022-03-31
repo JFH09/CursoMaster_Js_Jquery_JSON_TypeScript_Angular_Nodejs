@@ -3,7 +3,9 @@
   <p>Vamos a aprender angular juntos</p>
 
   <p>Uso de componenete videojuego...</p>
-  <videojuego></videojuego>
+  <videojuego *ngIf="mostrarVideoJuegos"></videojuego>
+  <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrarVideoJuegos"> ocultarVideojuegos</button>
+  <button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrarVideoJuegos">mostrar_VideoJuegos</button>
   <zapatillas></zapatillas>
   <cursos></cursos>
 </div>
