@@ -1,6 +1,13 @@
-<div>
+<div [ngStyle]="{
+  'background' : config.fondo,
+  'padding' : '20px',
+  'border' : '5px solid black',
+  'border-color' : config.color
+  
+}">
+
   <h1>Bienvenido a {{title}} !!!</h1>
-  <p>Vamos a aprender angular juntos</p>
+  <p>Descripcion importado/exportado = > {{descripcion}}</p>
 
   <p>Uso de componenete videojuego...</p>
   <videojuego *ngIf="mostrarVideoJuegos"></videojuego>
