@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { configuracion } from '../models/configuracion'
 import { Zapatilla } from "../models/zapatilla";
 
 @Component({
@@ -10,6 +11,7 @@ export class ZapatillasComponent {
 
     public titulo: string = " Nuevo Componente - Zapatillas";
     public zapatillas:Array<Zapatilla>;
+    public config;
 
     constructor(){
         this.zapatillas = [ 
@@ -17,6 +19,7 @@ export class ZapatillasComponent {
             new Zapatilla("Nike Runner", "Nike", "Negro", 60,   true),
             new Zapatilla("Adidas Yezzy", "Adidas", "Gris", 180, false)
         ];
+        this.config = configuracion;
     }
 
     ngOnInit(){

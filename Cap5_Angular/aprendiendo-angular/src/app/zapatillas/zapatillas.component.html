@@ -11,5 +11,10 @@
   la directuca ngFor...
 </ul> -->
 <ul>
-  <li *ngFor="let tennis of zapatillas">{{tennis.nombre}} - <strong>{{tennis.precio }}</strong></li>
+  <li *ngFor="let tennis of zapatillas">{{tennis.nombre}} - <strong>{{tennis.precio }}</strong>
+    <!--si precio es menor o = a 80 entonces ... que coloque lo de la etiqueta...-->
+    <span [ngStyle]="{'color' : config.color_texto}" *ngIf="tennis.precio <= 80"
+      [style.background]="tennis.precio <= 80 ? 'green':'transparent'">!!!EN
+      OFERTA!!!!</span>
+  </li>
 </ul>
