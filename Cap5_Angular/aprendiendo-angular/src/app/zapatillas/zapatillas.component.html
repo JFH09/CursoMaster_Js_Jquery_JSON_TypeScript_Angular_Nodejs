@@ -3,8 +3,13 @@
 
 <p>usando el componente de videojuegos aqui...</p>
 
-<ul>
+<!-- <ul>
   <li>Nike</li>
   <li>Adiddas</li>
   <li>Reebok</li>
+  En vez de mostrar los datos de esta forma, se toman de zap.component y se usa 
+  la directuca ngFor...
+</ul> -->
+<ul>
+  <li *ngFor="let tennis of zapatillas">{{tennis.nombre}} - <strong>{{tennis.precio }}</strong></li>
 </ul>
