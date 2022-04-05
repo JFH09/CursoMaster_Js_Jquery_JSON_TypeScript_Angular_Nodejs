@@ -13,8 +13,10 @@ export class ZapatillasComponent {
     public zapatillas:Array<Zapatilla>;
     public marcas: String[];
     public config;
+    public color: String;
 
     constructor(){
+        this.color = "blue";
         this.zapatillas = [ 
             new Zapatilla("Nike Airmax", "Nike", "Negro", 160,   true),
             new Zapatilla("Reebook Classic", "Reebook", "Blanco", 80, true),
