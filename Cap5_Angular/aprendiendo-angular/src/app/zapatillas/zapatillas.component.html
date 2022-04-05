@@ -1,5 +1,15 @@
 <h1>{{titulo}}</h1>
 <h1>Componente Zapatillas ...</h1>
+<p>Compra las zapatillas de las mejores marcas como:</p>
+<p>No se por que aparecen con comas si cuando los /n
+  recorro en el console aparecen separados /:
+  - obvio sin el uso del indice... (en el video aparecia
+  sin el uso del index)
+</p>
+<ul>
+  <li *ngFor="let tipos of marcas; let indice = index">{{indice + " - " + marcas[indice]}}</li>
+</ul>
+<p>Las zapatillas deportillas que se tienen disponibles son :</p>
 
 <p>usando el componente de videojuegos aqui...</p>
 
@@ -11,10 +21,16 @@
   la directuca ngFor...
 </ul> -->
 <ul>
-  <li *ngFor="let tennis of zapatillas">{{tennis.nombre}} - <strong>{{tennis.precio }}</strong>
+  <li *ngFor="let tennis of zapatillas">
+
+    <span [ngStyle]="{
+      'text-decoration' : !tennis.stock ? 'line-through' : 'none'
+    }">{{tennis.nombre}} - <strong>{{tennis.precio }}</strong></span>
     <!--si precio es menor o = a 80 entonces ... que coloque lo de la etiqueta...-->
     <span [ngStyle]="{'color' : config.color_texto}" *ngIf="tennis.precio <= 80"
       [style.background]="tennis.precio <= 80 ? 'green':'transparent'">!!!EN
       OFERTA!!!!</span>
+
   </li>
+
 </ul>

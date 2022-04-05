@@ -11,19 +11,36 @@ export class ZapatillasComponent {
 
     public titulo: string = " Nuevo Componente - Zapatillas";
     public zapatillas:Array<Zapatilla>;
+    public marcas: String[];
     public config;
 
     constructor(){
         this.zapatillas = [ 
-            new Zapatilla("Reebook Classic", "Reebook", "Blanco", 80,   true),
-            new Zapatilla("Nike Runner", "Nike", "Negro", 60,   true),
+            new Zapatilla("Nike Airmax", "Nike", "Negro", 160,   true),
+            new Zapatilla("Reebook Classic", "Reebook", "Blanco", 80, true),
+            new Zapatilla("Reebook Spartan", "Reebook", "Rojas", 140, false),
+            new Zapatilla("Nike Runner", "Nike", "Negro", 60, true),
             new Zapatilla("Adidas Yezzy", "Adidas", "Gris", 180, false)
         ];
         this.config = configuracion;
+        this.marcas = new Array();
     }
 
     ngOnInit(){
-        console.log(this.zapatillas);   
+        console.log(this.zapatillas);  
+        this.getMarcas(); 
+    }
+
+    getMarcas(){
+        
+        this.zapatillas.forEach((zapatilla, index) => {
+            if(this.marcas.indexOf(zapatilla.marca) < 0){
+                console.log(zapatilla.marca);
+                this.marcas.push(zapatilla.marca); 
+            }
+            
+        });
+        console.log(this.marcas);
     }
 
     // constructor(){
