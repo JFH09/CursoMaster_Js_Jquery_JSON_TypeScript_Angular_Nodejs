@@ -11,11 +11,13 @@ export class ZapatillasComponent {
 
     public titulo: string = " Nuevo Componente - Zapatillas";
     public zapatillas:Array<Zapatilla>;
-    public marcas: String[];
+    public marcas: string[];
     public config;
-    public color: String;
+    public color: string;
+    public nueva_marca: string;
 
     constructor(){
+        this.nueva_marca = "Fila";
         this.color = "blue";
         this.zapatillas = [ 
             new Zapatilla("Nike Airmax", "Nike", "Negro", 160,   true),
@@ -43,8 +45,17 @@ export class ZapatillasComponent {
             
         });
         console.log(this.marcas);
+
     }
 
+
+    getMarca(){
+        alert(this.nueva_marca);
+    }
+
+    addMarca(){
+        this.marcas.push(this.nueva_marca);
+    }
     // constructor(){
 
     //     this.titulo = " Nuevo Componente - Zapatillas";

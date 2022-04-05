@@ -6,6 +6,12 @@
   - obvio sin el uso del indice... (en el video aparecia
   sin el uso del index)
 </p>
+<p>Añadir marca</p>
+<!--Para usar este se importa FormsModule en app.module (creo que seria el principal)-->
+<p><input type="text" [(ngModel)]="nueva_marca"></p>
+<button (click)="getMarca()">Obtener/Mostrar Nueva Marca</button>
+<button (click)="addMarca()">Añadir - Nueva Marca</button>
+<p>{{nueva_marca}}</p>
 <ul>
   <li *ngFor="let tipos of marcas; let indice = index">{{indice + " - " + marcas[indice]}}</li>
 </ul>
