@@ -56,6 +56,10 @@ export class ZapatillasComponent {
     addMarca(){
         this.marcas.push(this.nueva_marca);
     }
+
+ 
+
+
     // constructor(){
 
     //     this.titulo = " Nuevo Componente - Zapatillas";

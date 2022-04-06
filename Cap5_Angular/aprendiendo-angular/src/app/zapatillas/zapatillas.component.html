@@ -8,6 +8,7 @@
 </p>
 <p>Añadir marca</p>
 <!--Para usar este se importa FormsModule en app.module (creo que seria el principal)-->
+<!--Nombre de la directiva = "propiedad/variable que se va a modificar.."-->
 <p><input type="text" [(ngModel)]="nueva_marca"></p>
 <button (click)="getMarca()">Obtener/Mostrar Nueva Marca</button>
 <button (click)="addMarca()">Añadir - Nueva Marca</button>
@@ -42,6 +43,9 @@
 </ul>
 
 <p>El color de la mayoria de las zapatillas es: </p>
+<p>coloca - red/blue/orange/yellow </p>
+<input type="text" [(ngModel)]="color">
+<!--Solo con tener el input y la variable se logra modificar la var no es necesario colocar el boton de agregar o cambiar /: -->
 <ul [ngSwitch]="color">
   <li *ngSwitchCase="'yellow'">El color predominante es el <span style="background:yellow;">amarillo</span></li>
   <li *ngSwitchCase="'red'">El color predominante es el <span [ngStyle]="{'background': color}">rojo</span></li>
