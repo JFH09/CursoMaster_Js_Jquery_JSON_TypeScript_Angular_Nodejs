@@ -8,8 +8,10 @@
 </p>
 <p>Añadir marca</p>
 <!--Para usar este se importa FormsModule en app.module (creo que seria el principal)-->
-<!--Nombre de la directiva = "propiedad/variable que se va a modificar.."-->
-<p><input type="text" [(ngModel)]="nueva_marca"></p>
+<!--Nombre de la directiva-> [(ngModel)] = "propiedad/variable que se va a modificar.."-->
+<!--Para el blur es para saber si salio del input-->
+<!--Para keyup es capturar teclas (en este caso el enter)-->
+<p><input type="text" [(ngModel)]="nueva_marca" (blur)="onBlur()" (keyup.enter)="mostrarPalabra()"></p>
 <button (click)="getMarca()">Obtener/Mostrar Nueva Marca</button>
 <button (click)="addMarca()">Añadir - Nueva Marca</button>
 <p>{{nueva_marca}}</p>

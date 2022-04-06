@@ -64,7 +64,13 @@ export class ZapatillasComponent {
         //si se le coloca el 2 se eliminarian 2 elementos, creeria que los que estan seguidos del incide que se le coloque ....
     }
 
+    onBlur(){
+        console.log("Has salido del input");
+    }
 
+    mostrarPalabra(){
+        alert(this.nueva_marca);
+    }
     // constructor(){
 
     //     this.titulo = " Nuevo Componente - Zapatillas";
