@@ -57,7 +57,12 @@ export class ZapatillasComponent {
         this.marcas.push(this.nueva_marca);
     }
 
- 
+    eliminarMarca(indice: number){
+       // delete this.marcas[indice];  una forma... pero mejor...
+
+       this.marcas.splice(indice, 1); //desde que numero quiero que se eliminen, cuantos quiero que se eliminen (un elemento)
+        //si se le coloca el 2 se eliminarian 2 elementos, creeria que los que estan seguidos del incide que se le coloque ....
+    }
 
 
     // constructor(){

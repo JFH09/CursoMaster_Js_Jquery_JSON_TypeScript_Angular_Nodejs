@@ -14,7 +14,10 @@
 <button (click)="addMarca()">Añadir - Nueva Marca</button>
 <p>{{nueva_marca}}</p>
 <ul>
-  <li *ngFor="let tipos of marcas; let indice = index">{{indice + " - " + marcas[indice]}}</li>
+  <li *ngFor="let tipos of marcas; let indice = index">
+    {{indice + " - " + marcas[indice]}}
+    <button (click)="eliminarMarca(indice)">Eliminar Marca</button>
+  </li>
 </ul>
 <p>Las zapatillas deportillas que se tienen disponibles son :</p>
 
