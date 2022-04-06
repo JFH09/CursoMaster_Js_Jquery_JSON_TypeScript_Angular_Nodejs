@@ -7,12 +7,14 @@
 }">
 
   <h1>Bienvenido a {{title}} !!!</h1>
-  <p>Descripcion importado/exportado = > {{descripcion}}</p>
+  <router-outlet></router-outlet>
+  <!--Se carga dentro de el el componente que se le indique desde la ruta-->
+  <!-- <p>Descripcion importado/exportado = > {{descripcion}}</p>
 
   <p>Uso de componenete videojuego...</p>
   <videojuego *ngIf="mostrarVideoJuegos"></videojuego>
   <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrarVideoJuegos"> ocultarVideojuegos</button>
   <button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrarVideoJuegos">mostrar_VideoJuegos</button>
   <zapatillas></zapatillas>
-  <cursos></cursos>
+  <cursos></cursos> -->
 </div>
