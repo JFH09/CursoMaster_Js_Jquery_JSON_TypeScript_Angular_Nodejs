@@ -2,3 +2,11 @@
     color: gray;
     font-size: 18px;
 }
+
+.fondoRojo{
+    background: rgb(146, 74, 74);
+}
+
+.subrayado{
+    text-decoration: underline;
+}

@@ -39,7 +39,12 @@
       'text-decoration' : !tennis.stock ? 'line-through' : 'none'
     }">{{tennis.nombre}} -
       <!--Si el precio de los tennis es > a 80 coloquele la clase (altoPrecio) -> "style-css" se puede incluir en html/importar desde el component / o desde el mismo angular.json incluirlo (si no se importa en el componente lo mejor es la de json)-->
-      <strong [class.altoPrecio]="tennis.precio > 80">{{tennis.precio }}</strong></span>
+      <strong [class.altoPrecio]="tennis.precio > 80" [ngClass]="{
+          'fondoRojo' : tennis.precio > 100,
+          'subrayado' : tennis.marca == 'Nike'
+        }">{{tennis.precio }}
+      </strong></span>
+    <!--Lo bueno del ngClass es que se le pueden colocar condiciones para colocar las clases-->
     <!--si precio es menor o = a 80 entonces ... que coloque lo de la etiqueta...-->
     <span [ngStyle]="{'color' : config.color_texto}" *ngIf="tennis.precio <= 80"
       [style.background]="tennis.precio <= 80 ? 'green':'transparent'">!!!EN
