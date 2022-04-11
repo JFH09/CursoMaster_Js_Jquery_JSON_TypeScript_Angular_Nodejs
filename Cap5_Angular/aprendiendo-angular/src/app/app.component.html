@@ -7,9 +7,20 @@
 }">
 
   <h1>Bienvenido a {{title}} !!!</h1>
-  <router-outlet></router-outlet>
-  <!--Se carga dentro de el el componente que se le indique desde la ruta-->
-  <!-- <p>Descripcion importado/exportado = > {{descripcion}}</p>
+  <p>Descripcion importado/exportado = > {{descripcion}}
+
+    <nav>
+      <!--routerLink - directiva para poder navefar entre los componentes-->
+      <a [routerLink]="['/']">Home</a>
+      &nbsp;
+      <a [routerLink]="['/zapatillas']">Zapatillas</a>&nbsp;
+      <a [routerLink]="['/videojuego']">Videojuego</a>&nbsp;
+      <a [routerLink]="['/cursos']">Cursos</a>&nbsp;
+    </nav>
+
+    <router-outlet></router-outlet>
+    <!--Se carga dentro de el el componente que se le indique desde la ruta-->
+    <!-- <p>Descripcion importado/exportado = > {{descripcion}}</p>
 
   <p>Uso de componenete videojuego...</p>
   <videojuego *ngIf="mostrarVideoJuegos"></videojuego>
