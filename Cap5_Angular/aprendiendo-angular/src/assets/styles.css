@@ -10,3 +10,9 @@
 .subrayado{
     text-decoration: underline;
 }
+
+.active{
+    border: 3px solid rgb(179, 149, 18);
+    color: rgb(179, 149, 18);
+    padding: 2px;
+}

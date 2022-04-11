@@ -14,6 +14,7 @@ const appRoutes: Routes = [
     //ruta del navegador , el componente que se va a mostrar
     //el vacio es para que inicie con este componente y el home es uno que se creo normaalito...
     {path: ' ', component: HomeComponent},
+    {path: 'home', component: HomeComponent},
     {path: 'zapatillas', component: ZapatillasComponent},
     {path: 'videojuego', component: VideojuegoComponent},
     {path: 'cursos', component: CursosComponent},

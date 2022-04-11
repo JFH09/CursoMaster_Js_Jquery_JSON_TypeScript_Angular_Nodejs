@@ -10,14 +10,14 @@
   <p>Descripcion importado/exportado = > {{descripcion}}
 
     <nav>
-      <!--routerLink - directiva para poder navefar entre los componentes-->
-      <a [routerLink]="['/']">Home</a>
+      <!--routerLink - directiva para poder navefar entre los componentes/ con active es para ejecutar una regla css-->
+      <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
       &nbsp;
-      <a [routerLink]="['/zapatillas']">Zapatillas</a>&nbsp;
-      <a [routerLink]="['/videojuego']">Videojuego</a>&nbsp;
-      <a [routerLink]="['/cursos']">Cursos</a>&nbsp;
+      <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>&nbsp;
+      <a [routerLink]="['/videojuego']" [routerLinkActive]="['active']">Videojuego</a>&nbsp;
+      <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>&nbsp;
     </nav>
-
+    <hr>
     <router-outlet></router-outlet>
     <!--Se carga dentro de el el componente que se le indique desde la ruta-->
     <!-- <p>Descripcion importado/exportado = > {{descripcion}}</p>
