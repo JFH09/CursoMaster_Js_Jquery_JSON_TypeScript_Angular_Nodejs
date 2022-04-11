@@ -17,7 +17,8 @@ const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'zapatillas', component: ZapatillasComponent},
     {path: 'videojuego', component: VideojuegoComponent},
-    {path: 'cursos', component: CursosComponent},
+    {path: 'cursos', component: CursosComponent}, 
+    {path: 'cursos/:nombre/:followers', component: CursosComponent}, 
     //cuando no encuentra ninguno de los componentes, se ejecuta el componente que yo le diga
     //!Debe ser la ultima ruta en declararse o sino puede que hayan problemas...
     {path: '**', component: HomeComponent}
