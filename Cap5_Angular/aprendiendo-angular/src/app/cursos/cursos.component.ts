@@ -30,7 +30,15 @@ export class CursosComponent implements OnInit {
       this.followers = +params['followers']; //El mas es para convertirlo a number el followers que biene como string
       console.log(params);
       console.log(this.nombre +  " / " + typeof this.followers + " -> "+ this.followers);
+
+      if(this.nombre == 'ninguno'){ //si el parametro que se pasa por url es ninguno redirigir a home
+        this._router.navigate(['/home']);
+      }
     });
+  }
+
+  redirigir(){
+    this._router.navigate(['/zapatillas']);
   }
 
 }
